@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/python
 from slacker import Slacker
 
 token = 'Your_Bot_Token'
