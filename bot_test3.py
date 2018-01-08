@@ -7,6 +7,10 @@ slack = Slacker(token)
 slack.chat.post_message('#monitoring', '>-------------------------------------')
 slack.chat.post_message('#monitoring', '*System Monitoring*')
 
+slack.chat.post_message('#monitoring', '> command: uptime')
+p = os.popen('uptime')
+slack.chat.post_message('#monitoring', '```'+ p.read() + '```')
+
 slack.chat.post_message('#monitoring', '> command: df -h')
 p = os.popen('df -h')
 slack.chat.post_message('#monitoring', '```'+ p.read() + '```')
