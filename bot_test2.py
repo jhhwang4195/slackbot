@@ -3,7 +3,12 @@
 import os
 from slacker import Slacker
 
-token = 'Your_Bot_Token'
+token = ""
+try:
+	token = os.environ['SLACK_BOOT_TOKEN']
+except Exception as err:
+	print ("[Error] %s" % (str(err)))
+
 slack = Slacker(token)
 
 attachments_dict = dict()
