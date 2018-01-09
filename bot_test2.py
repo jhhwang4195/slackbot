@@ -5,7 +5,7 @@ from slacker import Slacker
 
 token = ""
 try:
-    token = os.environ['SLACK_BOOT_TOKEN']
+    token = os.environ['SLACK_BOT_TOKEN']
 except Exception as err:
     print ("[Error] %s" % (str(err)))
 
